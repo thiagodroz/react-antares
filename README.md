@@ -1,3 +1,3 @@
-# React Server Side Rendering
+# React Antares
 
-Project created to study the Server Side Rendering using React.
+Boilerplate project created to start a new project with Server Side Rendering using React.
