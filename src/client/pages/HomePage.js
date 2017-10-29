@@ -2,8 +2,9 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
-      <div>I'm the Home Component</div>
+    <div className="home__body center-align" style={{ marginTop: 200 }}>
+      <h3>Welcome!</h3>
+      <p>Welcome to the world of Server Side Rendering</p>
     </div>
   );
 };

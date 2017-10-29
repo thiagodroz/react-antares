@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchUsers } from '../actions';
 
-class UsersList extends Component {
+class UsersListPage extends Component {
   componentDidMount() {
     this.props.fetchUsers();
   }
@@ -23,15 +23,11 @@ class UsersList extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { users: state.users };
-}
-
-function loadData(store) {
-  return store.dispatch(fetchUsers());
+function mapStateToProps({ users }) {
+  return { users };
 }
 
 export default {
-  loadData,
-  component: connect(mapStateToProps, { fetchUsers })(UsersList)
-} 
+  component: connect(mapStateToProps, { fetchUsers })(UsersListPage),
+  loadData: ({ dispatch }) => dispatch(fetchUsers())
+}
